@@ -1,53 +1,56 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
-
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
-
 :root {
-    /* colors */
-    --color-alpha-light: MEDIUMSLATEBLUE;
-    --color-alpha: SLATEBLUE;
-
-    --color-neutral-light: LIGHTSLATEGRAY;
-    --color-neutral: SLATEGRAY;
-    --color-neutral-dark: DARKSLATEGRAY;
-
-    /* Shadows */
-
-    /* border radius */
-
-    /* transitions */
-    --transition-alpha: .1s;
+  /* colors */
+  --color-alpha-light: #F2F2F9;
+  --color-alpha: #A3A0FB;
+  --color-alpha-alt: #A5A4BF;
+  --color-alpha-dark: #4C4B68;
+  --color-alpha-10-dark: #43435D;
+  --color-alpha-20-dark: #4D4F5C;
+  --color-beta: #3B86FF;
+  --color-gamma: #FF6565;
+  --color-neutral-light: #fff;
+  /* --color-neutral: SLATEGRAY; */
+  --color-neutral-dark: #43425D;
+  /* Shadows */
+  --shadow-neutral: 0 2px 6px rgba(0, 0, 0, .04);
+  /* border radius */
+  /* transitions */
+  --transition-alpha: .1s;
+  --grid-sidebar-width: 260px;
+  --grid-baseline: 5px;
 }
 
 /*------------------------------------*\
 #GENERIC
 \*------------------------------------*/
-
 /*
     Generic: Page
     ---
     Global page styles + universal box-sizing:
 */
-
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: var(--color-neutral-dark);
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: 'Source Sans Pro', Helvetica, arial, sans-serif;
+  color: var(--color-alpha-20-dark);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-alpha-light);
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /*
@@ -56,32 +59,29 @@ html {
 *
 * Customize the background color to match your design.
 */
-
 ::-moz-selection {
-    background: var(--color-alpha);
-    color: white;
-    text-shadow: none;
+  background: var(--color-alpha);
+  color: white;
+  text-shadow: none;
 }
 
 ::selection {
-    background: var(--color-alpha);
-    color: white;
-    text-shadow: none;
+  background: var(--color-alpha);
+  color: white;
+  text-shadow: none;
 }
 
 /*------------------------------------*\
 #Elements
 \*------------------------------------*/
-
 /*
 Elements: Images
 ---
 Default markup for images to make them responsive
 */
-
 img {
-    max-width: 100%;
-    vertical-align: top;
+  max-width: 100%;
+  vertical-align: top;
 }
 
 /*
@@ -89,38 +89,37 @@ img {
     ---
     Default markup for typographic elements
 */
-
 h1,
 h2,
 h3 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 h1 {
-    font-size: 36px;
-    line-height: 48px;
-    margin: 0 0 24px;
+  font-size: 36px;
+  line-height: 48px;
+  margin: 0 0 24px;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 40px;
-    margin: 0 0 24px;
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 24px;
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 32px;
-    margin: 0 0 24px;
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0 0 24px;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    margin: 0 0 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 24px;
 }
 
 p,
@@ -130,89 +129,100 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+  margin: 0 0 24px;
 }
 
 ul,
 ol {
-    padding-left: 24px;
+  padding-left: 24px;
 }
 
 li ul,
 li ol {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 blockquote {
-    font-style: normal;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+  font-style: normal;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
 }
 
 blockquote * {
-    font-size: inherit;
-    line-height: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 figcaption {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    margin-top: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 8px;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 24px;
+  border: 0;
+  height: 1px;
+  background: LightGrey;
+  margin: 0 0 24px;
 }
 
 a {
-    transition: all var(--transition-alpha);
-    color: var(--color-alpha);
-    outline-color: var(--color-alpha);
-    outline-width: medium;
-    outline-offset: 2px;
+  -webkit-transition: all var(--transition-alpha);
+  transition: all var(--transition-alpha);
+  color: var(--color-alpha);
+  outline-color: var(--color-alpha);
+  outline-width: medium;
+  outline-offset: 2px;
 }
 
 a:visited,
 a:active {
-    color: var(--color-alpha);
+  color: var(--color-alpha);
 }
 
 a:hover,
 a:focus {
-    color: var(--color-alpha-light);
+  color: var(--color-alpha-light);
 }
 
 label,
 input {
-    display: block;
+  display: block;
 }
 
 select {
-    width: 100%;
+  width: 100%;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--color-neutral-light);
+}
+
+input:-ms-input-placeholder {
+  color: var(--color-neutral-light);
+}
+
+input::-ms-input-placeholder {
+  color: var(--color-neutral-light);
 }
 
 input::placeholder {
-    color: var(--color-neutral-light);
+  color: var(--color-neutral-light);
 }
 
 /*------------------------------------*\
 #OBJECTS
 \*------------------------------------*/
-
 /*
     Objects: Row
     ---
     Creates a horizontal row that stretches the viewport and adds padding around children
 */
-
 .o-row {
-    position: relative;
-    padding: 24px 24px 0;
+  position: relative;
+  padding: 24px 24px 0;
 }
 
 /*
@@ -220,12 +230,12 @@ input::placeholder {
     ---
     Creates a horizontal container that sets de global max-width
 */
-
 .o-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
-    width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 79.5em;
+  /* 79.5 * 16px = 1272 */
+  width: 100%;
 }
 
 /*
@@ -233,10 +243,9 @@ input::placeholder {
     ---
     Small reusable object to remove default list styling from lists
 */
-
 .o-list {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 /*
@@ -244,28 +253,23 @@ input::placeholder {
     ---
     Small button reset object
 */
-
 .o-button-reset {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
-    background: transparent;
-
-    /* inherit font & color from ancestor */
-    color: inherit;
-    font: inherit;
-
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: normal;
-
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
 }
 
 /*
@@ -273,44 +277,141 @@ input::placeholder {
     ---
     Accessibly hide any element
 */
-
 .o-hide-accessible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
+/*
+    Component: App
+    ---
+    App
+*/
+.c-app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.c-app__logo {
+  background: var(--color-alpha-10-dark);
+  padding: calc(var(--grid-baseline) * 5.2) 0 calc(var(--grid-baseline) * 4.6) calc(var(--grid-baseline) * 4.6);
+  color: var(--color-neutral-light);
+}
+
+.c-app__logo h1 {
+  line-height: 21px;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.c-app__topbar {
+  background: var(--color-neutral-light);
+  -webkit-box-shadow: var(--shadow-neutral);
+          box-shadow: var(--shadow-neutral);
+}
+
+.c-app__sidebar {
+  background: var(--color-alpha-dark);
+  max-height: calc(100vh - 70px);
+  overflow: auto;
+}
+
+.c-app__main {
+  max-height: calc(100vh - 70px);
+  overflow: auto;
+}
+
+@media screen and (min-width: 65rem) {
+  .c-app {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: var(--grid-sidebar-width) auto;
+        grid-template-columns: var(--grid-sidebar-width) auto;
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+  }
+}
+
+.c-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item {
+  margin: 0;
+  padding: calc(var(--grid-baseline)*3.6) 0 calc(var(--grid-baseline)*3.8) calc(var(--grid-baseline)*4);
+  border-left: 5px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background .3s ease-out,border .3s ease-out;
+  transition: background .3s ease-out,border .3s ease-out;
+  margin-top: calc(var(--grid-baseline)*1.2);
+}
+
+.c-nav__item a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--color-neutral-light);
+  padding-left: calc(var(--grid-baseline)*2.2);
+}
+
+.c-nav__item .c-nav__icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: var(--color-alpha-alt);
+}
+
+.c-nav__item:hover {
+  padding: calc(var(--grid-baseline)*3.6) 0 calc(var(--grid-baseline)*3.8) calc(var(--grid-baseline)*4);
+  background: var(--color-alpha-10-dark);
+  border-left: 5px solid var(--color-alpha);
+}
+
+.c-nav__item--selected {
+  background: var(--color-alpha-10-dark);
+  border-left: 5px solid var(--color-alpha);
+  padding: calc(var(--grid-baseline)*3.6) 0 calc(var(--grid-baseline)*3.8) calc(var(--grid-baseline)*4);
+}
+
+.c-nav__item--selected .c-nav__icon {
+  fill: var(--color-alpha);
+}
 
 /*
     Component: Logo
     ---
     Website main logo
 */
-
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
-
 /*
     Utilities: color
     ---
     Utility classes to put specific colors onto elements
 */
-
 .u-color-neutral {
-    color: var(--color-neutral);
+  color: var(--color-neutral);
 }
 
 .u-color-neutral-dark {
-    color: var(--color-neutral-dark);
+  color: var(--color-neutral-dark);
 }
 
 /*
@@ -318,33 +419,32 @@ input::placeholder {
     ---
     Utility classes to put specific margins and paddings onto elements
 */
-
 .u-pt-clear {
-    padding-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .u-mb-clear {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .u-mb-xs {
-    margin-bottom: 4px !important;
+  margin-bottom: 4px !important;
 }
 
 .u-mb-sm {
-    margin-bottom: 8px !important;
+  margin-bottom: 8px !important;
 }
 
 .u-mb-md {
-    margin-bottom: 16px !important;
+  margin-bottom: 16px !important;
 }
 
 .u-mb-lg {
-    margin-bottom: 32px !important;
+  margin-bottom: 32px !important;
 }
 
 .u-mb-xl {
-    margin-bottom: 48px !important;
+  margin-bottom: 48px !important;
 }
 
 /*
@@ -352,55 +452,50 @@ input::placeholder {
     ---
     Utility classes to put specific max widths onto elements
 */
-
 .u-max-width-xs {
-    max-width: 27em !important;
+  max-width: 27em !important;
 }
 
 .u-max-width-sm {
-    max-width: 39em !important;
+  max-width: 39em !important;
 }
 
 .u-max-width-md {
-    max-width: 50em !important;
+  max-width: 50em !important;
 }
 
 .u-max-width-lg {
-    max-width: 63.5em !important;
+  max-width: 63.5em !important;
 }
 
 .u-max-width-none {
-    max-width: none !important;
+  max-width: none !important;
 }
-
 
 /*
     Utilities: align
     ---
     Utility classes align text or components
 */
-
 .u-align-text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .u-align-center {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /*
     Utilities: text
     Utility classes to create smaller or bigger test
 */
-
 .u-text-sm {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 /*------------------------------------*\
 #MEDIA
 \*------------------------------------*/
-
 /*
     Media Queries
     ---
@@ -408,90 +503,85 @@ input::placeholder {
     These examples override the primary ('mobile first') styles.
     USE THEM INLINE!
 */
-
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in mobile first design
 */
-
 /* Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {}
 */
-
 /* Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {}
 */
-
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
 */
-
 /* Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
 */
-
 /*
     Print styles.
     ---
     Inlined to avoid the additional HTTP request:
     http://www.phpied.com/delay-loading-your-print-css/
 */
-
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
         http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    /*
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    /*
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
     */
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
+/*# sourceMappingURL=screen.css.map */
