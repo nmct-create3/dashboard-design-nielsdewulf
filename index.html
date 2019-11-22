@@ -1,213 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Impekable</title>
-    <meta name="description" content="This is my HTML5 boilerplate." />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Impekable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is my HTML5 boilerplate." />
 
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/screen.css" />
-    <script src="./js/svgxuse.js"></script>
-  </head>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <div class="c-app">
-      <!-- Logos -->
-      <div class="c-app__logo">
-        <h1>
-          IMPEKABLE
-        </h1>
-      </div>
-      <!-- TopBar -->
-      <header class="c-app__topbar">
-      </header>
-      <!-- Navigation -->
-      <aside class="c-app__sidebar">
-        <nav class="c-nav">
-          <ul class="c-nav__list">
-            <li class="c-nav__item c-nav__item--selected">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/screen.css" />
+  <script src="./js/svgxuse.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+
+<body>
+  <div class="c-app">
+    <!-- Logos -->
+    <div class="c-app__logo">
+      <h1>
+        <div class="c-app__nav-icon">
+          <input class="o-hide-accessible c-hamburger__input" type="checkbox" id="hamburger">
+          <label for="hamburger" class="c-hamburger c-hamburger--squeeze">
+            <span class="c-hamburger__box">
+              <span class="c-hamburger__inner"></span>
+            </span>
+          </label>
+        </div>
+
+        IMPEKABLE
+      </h1>
+
+    </div>
+    <!-- TopBar -->
+    <header class="c-app__topbar">
+    </header>
+    <!-- Navigation -->
+    <aside class="c-app__sidebar c-app__sidebar--ishidden">
+      <nav class="c-nav">
+        <ul class="c-nav__list">
+          <li class="c-nav__item c-nav__item--selected">
+            <a href="#">
               <svg class="c-nav__icon">
                 <use xlink:href="./img/icons/symbol-defs.svg#c-icon_home"></use>
               </svg>
-              <a href="#">Home</a>
-            </li>
-            <li class="c-nav__item">
+              Home
+            </a>
+
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_dashboard"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_dashboard"></use>
               </svg>
-              <a href="#">Dashboard</a>
-            </li>
-            <li class="c-nav__item">
+              Dashboard</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_inbox"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_inbox"></use>
               </svg>
-              <a href="#">Inbox</a>
-            </li>
-            <li class="c-nav__item">
+              Inbox</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_products"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_products"></use>
               </svg>
-              <a href="#">Products</a>
-            </li>
-            <li class="c-nav__item">
+              Products</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_Invoices"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_Invoices"></use>
               </svg>
-              <a href="#">Invoices</a>
-            </li>
-            <li class="c-nav__item">
+              Invoices</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_customers"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_customers"></use>
               </svg>
-              <a href="#">Customers</a>
-            </li>
-            <li class="c-nav__item">
+              Customers</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_chat-room"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_chat-room"></use>
               </svg>
-              <a href="#">Chat Room</a>
-            </li>
-            <li class="c-nav__item">
+              Chat Room</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_calendar"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_calendar"></use>
               </svg>
-              <a href="#">Calendar</a>
-            </li>
-            <li class="c-nav__item">
+              Calendar</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_help-center"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_help-center"></use>
               </svg>
-              <a href="#">Help Center</a>
-            </li>
-            <li class="c-nav__item">
+              Help Center</a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#">
+
               <svg class="c-nav__icon">
-                <use
-                  xlink:href="./img/icons/symbol-defs.svg#c-icon_setting"
-                ></use>
+                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_setting"></use>
               </svg>
-              <a href="#">Settings</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-      <!-- Main -->
-      <main class="c-app__main">
-        <div class="u-max-width-lg u-align-center">
-          <h2>
-            Overview
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
-            amet placerat ante. Curabitur elit augue, luctus non diam sed,
-            egestas venenatis ligula. Vivamus ac felis lacus. Maecenas ultricies
-            et metus quis fermentum. Nunc auctor ipsum a urna rhoncus, eleifend
-            sodales dui ultrices. Maecenas magna dui, ornare sit amet sem ac,
-            interdum ultrices velit. Integer ut est vitae metus posuere interdum
-            ut nec leo. Proin rutrum fringilla ex, in luctus dolor convallis
-            nec. Integer in nisl sit amet sapien blandit suscipit vitae eget
-            neque. Praesent sed est nec quam iaculis eleifend. Proin nunc purus,
-            volutpat ut iaculis sed, euismod vitae diam. Ut ornare at velit sit
-            amet interdum. Integer in tellus porta, luctus sapien non, aliquam
-            dolor.
-          </p>
-          <p>
-            In quis mollis enim, a pulvinar arcu. Nunc elementum iaculis lacus,
-            ac vestibulum mauris mollis vitae. Etiam commodo dignissim dui, ut
-            cursus neque interdum eu. Sed vestibulum nisl a elit aliquam cursus.
-            Aliquam et quam porttitor, imperdiet purus at, fermentum ante. Nam
-            tincidunt volutpat hendrerit. Cras sit amet ex leo. Maecenas semper
-            feugiat ultrices. Curabitur a quam et lacus tristique tincidunt eu a
-            leo. Donec nisl arcu, porta non ex ut, malesuada scelerisque magna.
-            Integer ac elit quis erat venenatis cursus at eget tortor. Nam
-            hendrerit maximus nunc, posuere pharetra nulla gravida vel. Morbi
-            dapibus leo urna. Aliquam nec egestas ante, nec tristique est. Donec
-            aliquet lectus a dolor tempus aliquet. Aenean dapibus finibus nulla,
-            nec finibus purus.
-          </p>
-          <p>
-            Vivamus tincidunt sed nisi at imperdiet. Praesent dignissim gravida
-            velit. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Phasellus non molestie magna.
-            Fusce eget rhoncus dui. Phasellus nisl velit, congue quis ultrices
-            at, malesuada eget lacus. Nulla rhoncus faucibus metus ut lobortis.
-            Nulla vitae tincidunt lorem, eget rhoncus elit. Donec malesuada
-            tellus ligula, eget varius massa dignissim in. Vivamus fringilla
-            malesuada enim sed aliquet. Sed pellentesque ut ex molestie
-            tristique.
-          </p>
-          <p>
-            Cras placerat vel justo in interdum. Proin tempor neque at metus
-            condimentum scelerisque id eu massa. Fusce viverra tincidunt porta.
-            Pellentesque volutpat condimentum vestibulum. Nam quis mi id nunc
-            vestibulum feugiat. Praesent ullamcorper rutrum nibh, eu tristique
-            odio commodo vitae. Vestibulum luctus sapien tortor, nec tincidunt
-            nisl efficitur ut. Maecenas vehicula at ex quis accumsan. Duis
-            elementum mauris sit amet turpis venenatis ullamcorper. Vivamus at
-            nisl sit amet tortor mollis congue eu eget purus. In dictum lectus
-            et justo convallis, sit amet blandit sem euismod. Maecenas tempor
-            massa ante, non condimentum nisl placerat eget.
-          </p>
-          <p>
-            Mauris fermentum, lectus vitae pharetra vulputate, est nibh
-            pellentesque arcu, sit amet pretium purus sapien vel libero.
-            Pellentesque molestie venenatis suscipit. Quisque quis nibh
-            scelerisque, porta ante non, tempor leo. In a elit odio. Fusce
-            sagittis tincidunt quam in dictum. Vivamus et nunc porttitor,
-            lacinia magna a, tempor nisl. Vestibulum sodales pretium elit a
-            dapibus. Donec quis tempor justo. Etiam eleifend mi nunc, ut
-            malesuada tortor euismod vitae. Etiam dignissim tincidunt convallis.
-            Morbi commodo ligula non ligula molestie mollis. Mauris ultricies
-            aliquam est. Morbi pretium, nunc vel venenatis aliquet, quam enim
-            iaculis odio, non pretium velit enim eu magna. Duis porta sapien eu
-            quam egestas feugiat. Ut ut tellus sit amet quam tincidunt blandit
-            interdum sit amet enim. Sed dignissim consectetur nisl quis mollis.
-          </p>
-          <p>
-            Sed ultrices porta tristique. Praesent vitae dui pulvinar, placerat
-            ante a, cursus lacus. Nullam ullamcorper maximus sem vel dignissim.
-            Nulla facilisi. Sed pellentesque risus justo, sit amet mattis neque
-            ornare eget. Proin blandit, lectus eu eleifend facilisis, augue erat
-            volutpat leo, vitae convallis neque augue non risus. Suspendisse
-            potenti. Maecenas ullamcorper hendrerit arcu quis rutrum. Nam vitae
-            nunc efficitur, ullamcorper lectus a, feugiat mauris.
-          </p>
-          <p>
-            Aliquam ac mauris odio. Aliquam sodales auctor massa, et iaculis dui
-            accumsan at. Curabitur turpis velit, sodales ac arcu a, condimentum
-            finibus felis. Phasellus nec ligula lobortis, consequat turpis ac,
-            efficitur massa. Suspendisse potenti. Donec laoreet placerat ante,
-            sed ultrices quam sagittis eu. Morbi non odio dolor. Nulla vitae
-            nibh venenatis, mollis orci vel, rhoncus felis. Suspendisse iaculis
-            felis sed pellentesque egestas. Suspendisse vel sollicitudin leo,
-            sed placerat erat. Aliquam maximus, nibh a vulputate mollis, libero
-            odio posuere arcu, tincidunt volutpat nisl felis quis augue. Nam
-            sagittis eu odio eget pulvinar. Phasellus maximus dolor in molestie
-            accumsan. Phasellus faucibus nunc lacus, a aliquam sem eleifend at.
-          </p>
-        </div>
-      </main>
-    </div>
-  </body>
+              Settings</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- Main -->
+    <main class="c-app__main">
+      <div class="u-max-width-lg u-align-center">
+        <h2>
+          Overview
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit
+          amet placerat ante. Curabitur elit augue, luctus non diam sed,
+          egestas venenatis ligula. Vivamus ac felis lacus. Maecenas ultricies
+          et metus quis fermentum. Nunc auctor ipsum a urna rhoncus, eleifend
+          sodales dui ultrices. Maecenas magna dui, ornare sit amet sem ac,
+          interdum ultrices velit. Integer ut est vitae metus posuere interdum
+          ut nec leo. Proin rutrum fringilla ex, in luctus dolor convallis
+          nec. Integer in nisl sit amet sapien blandit suscipit vitae eget
+          neque. Praesent sed est nec quam iaculis eleifend. Proin nunc purus,
+          volutpat ut iaculis sed, euismod vitae diam. Ut ornare at velit sit
+          amet interdum. Integer in tellus porta, luctus sapien non, aliquam
+          dolor.
+        </p>
+        <p>
+          In quis mollis enim, a pulvinar arcu. Nunc elementum iaculis lacus,
+          ac vestibulum mauris mollis vitae. Etiam commodo dignissim dui, ut
+          cursus neque interdum eu. Sed vestibulum nisl a elit aliquam cursus.
+          Aliquam et quam porttitor, imperdiet purus at, fermentum ante. Nam
+          tincidunt volutpat hendrerit. Cras sit amet ex leo. Maecenas semper
+          feugiat ultrices. Curabitur a quam et lacus tristique tincidunt eu a
+          leo. Donec nisl arcu, porta non ex ut, malesuada scelerisque magna.
+          Integer ac elit quis erat venenatis cursus at eget tortor. Nam
+          hendrerit maximus nunc, posuere pharetra nulla gravida vel. Morbi
+          dapibus leo urna. Aliquam nec egestas ante, nec tristique est. Donec
+          aliquet lectus a dolor tempus aliquet. Aenean dapibus finibus nulla,
+          nec finibus purus.
+        </p>
+        <p>
+          Vivamus tincidunt sed nisi at imperdiet. Praesent dignissim gravida
+          velit. Pellentesque habitant morbi tristique senectus et netus et
+          malesuada fames ac turpis egestas. Phasellus non molestie magna.
+          Fusce eget rhoncus dui. Phasellus nisl velit, congue quis ultrices
+          at, malesuada eget lacus. Nulla rhoncus faucibus metus ut lobortis.
+          Nulla vitae tincidunt lorem, eget rhoncus elit. Donec malesuada
+          tellus ligula, eget varius massa dignissim in. Vivamus fringilla
+          malesuada enim sed aliquet. Sed pellentesque ut ex molestie
+          tristique.
+        </p>
+        <p>
+          Cras placerat vel justo in interdum. Proin tempor neque at metus
+          condimentum scelerisque id eu massa. Fusce viverra tincidunt porta.
+          Pellentesque volutpat condimentum vestibulum. Nam quis mi id nunc
+          vestibulum feugiat. Praesent ullamcorper rutrum nibh, eu tristique
+          odio commodo vitae. Vestibulum luctus sapien tortor, nec tincidunt
+          nisl efficitur ut. Maecenas vehicula at ex quis accumsan. Duis
+          elementum mauris sit amet turpis venenatis ullamcorper. Vivamus at
+          nisl sit amet tortor mollis congue eu eget purus. In dictum lectus
+          et justo convallis, sit amet blandit sem euismod. Maecenas tempor
+          massa ante, non condimentum nisl placerat eget.
+        </p>
+        <p>
+          Mauris fermentum, lectus vitae pharetra vulputate, est nibh
+          pellentesque arcu, sit amet pretium purus sapien vel libero.
+          Pellentesque molestie venenatis suscipit. Quisque quis nibh
+          scelerisque, porta ante non, tempor leo. In a elit odio. Fusce
+          sagittis tincidunt quam in dictum. Vivamus et nunc porttitor,
+          lacinia magna a, tempor nisl. Vestibulum sodales pretium elit a
+          dapibus. Donec quis tempor justo. Etiam eleifend mi nunc, ut
+          malesuada tortor euismod vitae. Etiam dignissim tincidunt convallis.
+          Morbi commodo ligula non ligula molestie mollis. Mauris ultricies
+          aliquam est. Morbi pretium, nunc vel venenatis aliquet, quam enim
+          iaculis odio, non pretium velit enim eu magna. Duis porta sapien eu
+          quam egestas feugiat. Ut ut tellus sit amet quam tincidunt blandit
+          interdum sit amet enim. Sed dignissim consectetur nisl quis mollis.
+        </p>
+        <p>
+          Sed ultrices porta tristique. Praesent vitae dui pulvinar, placerat
+          ante a, cursus lacus. Nullam ullamcorper maximus sem vel dignissim.
+          Nulla facilisi. Sed pellentesque risus justo, sit amet mattis neque
+          ornare eget. Proin blandit, lectus eu eleifend facilisis, augue erat
+          volutpat leo, vitae convallis neque augue non risus. Suspendisse
+          potenti. Maecenas ullamcorper hendrerit arcu quis rutrum. Nam vitae
+          nunc efficitur, ullamcorper lectus a, feugiat mauris.
+        </p>
+        <p>
+          Aliquam ac mauris odio. Aliquam sodales auctor massa, et iaculis dui
+          accumsan at. Curabitur turpis velit, sodales ac arcu a, condimentum
+          finibus felis. Phasellus nec ligula lobortis, consequat turpis ac,
+          efficitur massa. Suspendisse potenti. Donec laoreet placerat ante,
+          sed ultrices quam sagittis eu. Morbi non odio dolor. Nulla vitae
+          nibh venenatis, mollis orci vel, rhoncus felis. Suspendisse iaculis
+          felis sed pellentesque egestas. Suspendisse vel sollicitudin leo,
+          sed placerat erat. Aliquam maximus, nibh a vulputate mollis, libero
+          odio posuere arcu, tincidunt volutpat nisl felis quis augue. Nam
+          sagittis eu odio eget pulvinar. Phasellus maximus dolor in molestie
+          accumsan. Phasellus faucibus nunc lacus, a aliquam sem eleifend at.
+        </p>
+      </div>
+    </main>
+  </div>
+</body>
+
 </html>
