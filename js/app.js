@@ -90,6 +90,13 @@ const init = () => {
 		getVisitorsByDay(e.target.value);
 	});
 	getVisitorsByDay('maandag');
+
+	var percentageComplete = 0.75;
+	var strokeDashOffsetValue = 263.4674987792969 - (percentageComplete * 263.4674987792969);
+	var progressBar = document.querySelector(".js-progress-bar");
+	progressBar.style.strokeDashoffset = strokeDashOffsetValue;
+	console.log(progressBar.style.strokeDashoffset );
+
 };
 
 document.addEventListener('DOMContentLoaded', () => {

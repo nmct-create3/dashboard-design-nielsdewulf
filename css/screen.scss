@@ -620,7 +620,23 @@ input::placeholder {
     pointer-events: none;
     fill: var(--color-neutral-20-dark);
 }
+.c-progresscircle{
+    transform: rotate(-90deg);
+}
+.c-progresscircle__outer{
+    fill: none;
+    stroke: var(--color-neutral-10-dark);
+    stroke-width: 8;
 
+}
+.c-progresscircle__inner{
+    fill: none;
+    stroke: var(--color-alpha);
+    stroke-dasharray: 263.4674987792969;
+    stroke-dashoffset: 263;
+    stroke-width: 8;
+
+}
 
 /*------------------------------------*\
 #UTILITIES
