@@ -1,191 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Impekable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is my HTML5 boilerplate." />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Impekable</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This is my HTML5 boilerplate." />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+    <script src="./js/svgxuse.js"></script>
+    <script src="./js/app.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/screen.css" />
-  <script src="./js/svgxuse.js"></script>
-  <script src="./js/app.js"></script>
-</head>
+  <body>
+    <div class="c-app">
+      <!-- Logos -->
+      <div class="c-app__logo">
+        <h1>
+          <div class="c-app__nav-icon">
+            <input
+              class="o-hide-accessible c-hamburger__input"
+              type="checkbox"
+              id="hamburger"
+            />
+            <label for="hamburger" class="c-hamburger c-hamburger--squeeze">
+              <span class="c-hamburger__box">
+                <span class="c-hamburger__inner"></span>
+              </span>
+            </label>
+          </div>
 
-<body>
-  <div class="c-app">
-    <!-- Logos -->
-    <div class="c-app__logo">
-      <h1>
-        <div class="c-app__nav-icon">
-          <input class="o-hide-accessible c-hamburger__input" type="checkbox" id="hamburger">
-          <label for="hamburger" class="c-hamburger c-hamburger--squeeze">
-            <span class="c-hamburger__box">
-              <span class="c-hamburger__inner"></span>
-            </span>
-          </label>
+          IMPEKABLE
+        </h1>
+      </div>
+      <!-- TopBar -->
+      <header class="c-app__topbar">
+        <div class="c-search">
+          <svg class="c-search__icon">
+            <use xlink:href="./img/icons/symbol-defs.svg#c-icon_search"></use>
+          </svg>
+          <input
+            class="c-search__input"
+            placeholder="Search transactions, invoices or help"
+            type="user"
+          />
         </div>
-
-        IMPEKABLE
-      </h1>
-
-    </div>
-    <!-- TopBar -->
-    <header class="c-app__topbar">
-    </header>
-    <!-- Navigation -->
-    <aside class="c-app__sidebar c-app__sidebar--ishidden">
-      <nav class="c-nav">
-        <ul class="c-nav__list">
-          <li class="c-nav__item c-nav__item--selected">
-            <a href="#">
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_home"></use>
+        <div class="c-topbar__options">
+          <div class="c-button">
+            <button class="c-button__button">
+              <svg class="c-button__icon">
+                <use
+                  xlink:href="./img/icons/symbol-defs.svg#c-icon_help-center"
+                ></use>
               </svg>
-              Home
-            </a>
-
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_dashboard"></use>
+            </button>
+          </div>
+          <div class="c-button">
+            <button class="c-button__button ">
+              <svg class="c-button__icon">
+                <use
+                  xlink:href="./img/icons/symbol-defs.svg#c-icon_chat-room"
+                ></use>
               </svg>
-              Dashboard</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_inbox"></use>
+            </button>
+            
+          </div>
+          <div class="c-button">
+            <button class="c-button__button js-notifications">
+              <svg class="c-button__icon">
+                <use
+                  xlink:href="./img/icons/symbol-defs.svg#c-icon_notification"
+                ></use>
               </svg>
-              Inbox</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_products"></use>
-              </svg>
-              Products</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_Invoices"></use>
-              </svg>
-              Invoices</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_customers"></use>
-              </svg>
-              Customers</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_chat-room"></use>
-              </svg>
-              Chat Room</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_calendar"></use>
-              </svg>
-              Calendar</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_help-center"></use>
-              </svg>
-              Help Center</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#">
-
-              <svg class="c-nav__icon">
-                <use xlink:href="./img/icons/symbol-defs.svg#c-icon_setting"></use>
-              </svg>
-              Settings</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-    <!-- Main -->
-    <main class="c-app__main">
-      <div class="o-row">
-        <div class="o-container">
-          <h1>
-            Overview
-          </h1>
-          <div class="c-dashboard">
-            <div class="c-dashboard__item">
-              <div class="c-card">
-                <div class="c-card__header">
-                  <div class="c-card__title">
-                    <h2>Bezoekers per dag</h2>
+            </button>
+            <div class="c-button__dropdown">
+                <div class="c-dropdown js-notifications__dropdown c-dropdown--hidden">
+                  <div class="c-dropdown__title">
+                    <h2>Notifications</h2>
                   </div>
-                  <div class="c-card__dropdown">
-                    <span class="c-select">
-                      <select class="c-select__input js-select" name="select1" id="select1">
-                        <option value="maandag">Maandag</option>
-                        <option value="dinsdag">Dinsdag</option>
-                        <option value="woensdag">Woensdag</option>
-                        <option value="donderdag">Donderdag</option>
-                        <option value="vrijdag">Vrijdag</option>
-                        <option value="zaterdag">Zaterdag</option>
-                        <option value="zondag">Zondag</option>
-
-                      </select>
-                      <svg class="c-select__symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M7,10l5,5,5-5Z" />
-                      </svg>
-                    </span>
+                  <div class="c-dropdown__list">
+                    <div class="c-dropdown__item">
+                      <div class="c-dropdown__item-title">
+                        <h4>David Lee</h4>
+                      </div>
+                      <div class="c-dropdown__item-content">
+                        <p>Hey, I just read your message. What's up?</p>
+                      </div>
+                    </div>
+                    <div class="c-dropdown__item">
+                      <div class="c-dropdown__item-title">
+                        <h4>David Lee</h4>
+                      </div>
+                      <div class="c-dropdown__item-content">
+                        <p>Hey, I just read your message. What's up?</p>
+                      </div>
+                    </div>
+                    <div class="c-dropdown__item">
+                      <div class="c-dropdown__item-title">
+                        <h4>David Lee</h4>
+                      </div>
+                      <div class="c-dropdown__item-content">
+                        <p>Hey, I just read your message. What's up?</p>
+                      </div>
+                    </div>
+                    <div class="c-dropdown__item">
+                      <div class="c-dropdown__item-title">
+                        <h4>David Lee</h4>
+                      </div>
+                      <div class="c-dropdown__item-content">
+                        <p>Hey, I just read your message. What's up?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-dropdown__footer">
+                    <a href="#">See all</a>
                   </div>
                 </div>
-                <div class="c-card__body">
-                  <div class="c-card__chart">
-                    <canvas class="js-graph" width="3" height="1"></canvas>
+              </div>
+          </div>
+        </div>
+        <div class="c-topbar__user">
+          <div class="c-user">
+            <div class="c-button">
+              <button class="c-button__button js-user">
+                <p>John Doe</p>
+
+                <svg class="c-user__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_down-arrow-small"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="c-user__dropdown">
+              <div class="c-dropdown js-user__dropdown c-dropdown--hidden">
+                <div class="c-dropdown__item">
+                  <div class="c-dropdown__item-content">
+                    <p><b>Status :</b> Online</p>
+                  </div>
+                </div>
+                <div class="c-dropdown__item">
+                  <div class="c-dropdown__item-content">
+                    <p>Account Setting</p>
+                  </div>
+                </div>
+                <div class="c-dropdown__item">
+                  <div class="c-dropdown__item-content">
+                    <p>Feedback</p>
+                  </div>
+                </div>
+                <div class="c-dropdown__item">
+                  <div class="c-dropdown__item-content">
+                    <p>Log out</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="c-dashboard__item u-grid__column--6-of-12">Grid Item 2</div>
-            <div class="c-dashboard__item u-grid__column--6-of-12">Grid Item 3</div>
-            <div class="c-dashboard__item u-grid__column--4-of-12 u-grid__row--2span">
-              <h2>Money</h2>
-              <svg class="c-progresscircle" viewbox="0 0 100 100">
-                <circle class="c-progresscircle__outer" cx="50" cy="50" r="42"></circle>
-                <circle class="c-progresscircle__inner js-progress-bar" cx="50" cy="50" r="42"></circle>
-
-              </svg>
-            </div>
-            <div class="c-dashboard__item u-grid__column--8-of-12">Grid Item 5<br>test</div>
-            <div class="c-dashboard__item u-grid__column--4-of-12">Grid Item 6<br>test</div>
-            <div class="c-dashboard__item u-grid__column--4-of-12">Grid Item 7</div>
-            <div class="c-dashboard__item u-grid__column--4-of-12">Grid Item 8</div>
-            <div class="c-dashboard__item u-grid__column--8-of-12">Grid Item 9</div>
+            <div class="c-user__avatar"></div>
           </div>
         </div>
-      </div>
-    </main>
-  </div>
-</body>
-
+      </header>
+      <!-- Navigation -->
+      <aside class="c-app__sidebar c-app__sidebar--ishidden">
+        <nav class="c-nav">
+          <ul class="c-nav__list">
+            <li class="c-nav__item c-nav__item--selected">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_home"
+                  ></use>
+                </svg>
+                Home
+              </a>
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_dashboard"
+                  ></use>
+                </svg>
+                Dashboard</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_inbox"
+                  ></use>
+                </svg>
+                Inbox</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_products"
+                  ></use>
+                </svg>
+                Products</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_Invoices"
+                  ></use>
+                </svg>
+                Invoices</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_customers"
+                  ></use>
+                </svg>
+                Customers</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_chat-room"
+                  ></use>
+                </svg>
+                Chat Room</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_calendar"
+                  ></use>
+                </svg>
+                Calendar</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_help-center"
+                  ></use>
+                </svg>
+                Help Center</a
+              >
+            </li>
+            <li class="c-nav__item">
+              <a href="#">
+                <svg class="c-nav__icon">
+                  <use
+                    xlink:href="./img/icons/symbol-defs.svg#c-icon_setting"
+                  ></use>
+                </svg>
+                Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- Main -->
+      <main class="c-app__main">
+        <div class="o-row">
+          <div class="o-container">
+            <h1>
+              Overview
+            </h1>
+            <div class="c-dashboard">
+              <div class="c-dashboard__item">
+                <div class="c-card">
+                  <div class="c-card__header">
+                    <div class="c-card__title">
+                      <h2>Bezoekers per dag</h2>
+                    </div>
+                    <div class="c-card__dropdown">
+                      <span class="c-select">
+                        <select
+                          class="c-select__input js-select"
+                          name="select1"
+                          id="select1"
+                        >
+                          <option value="maandag">Maandag</option>
+                          <option value="dinsdag">Dinsdag</option>
+                          <option value="woensdag">Woensdag</option>
+                          <option value="donderdag">Donderdag</option>
+                          <option value="vrijdag">Vrijdag</option>
+                          <option value="zaterdag">Zaterdag</option>
+                          <option value="zondag">Zondag</option>
+                        </select>
+                        <svg
+                          class="c-select__symbol"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M7,10l5,5,5-5Z" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="c-card__body">
+                    <div class="c-card__chart">
+                      <canvas class="js-graph" width="3" height="1"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-dashboard__item u-grid__column--6-of-12">
+                Grid Item 2
+              </div>
+              <div class="c-dashboard__item u-grid__column--6-of-12">
+                Grid Item 3
+              </div>
+              <div
+                class="c-dashboard__item u-grid__column--4-of-12 u-grid__row--2span"
+              >
+                <h2>Money</h2>
+                <svg class="c-progresscircle" viewbox="0 0 100 100">
+                  <circle
+                    class="c-progresscircle__outer"
+                    cx="50"
+                    cy="50"
+                    r="42"
+                  ></circle>
+                  <circle
+                    class="c-progresscircle__inner js-progress-bar"
+                    cx="50"
+                    cy="50"
+                    r="42"
+                  ></circle>
+                </svg>
+              </div>
+              <div class="c-dashboard__item u-grid__column--8-of-12">
+                Grid Item 5<br />test
+              </div>
+              <div class="c-dashboard__item u-grid__column--4-of-12">
+                Grid Item 6<br />test
+              </div>
+              <div class="c-dashboard__item u-grid__column--4-of-12">
+                Grid Item 7
+              </div>
+              <div class="c-dashboard__item u-grid__column--4-of-12">
+                Grid Item 8
+              </div>
+              <div class="c-dashboard__item u-grid__column--8-of-12">
+                Grid Item 9
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

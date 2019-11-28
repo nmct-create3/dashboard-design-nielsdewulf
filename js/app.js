@@ -83,6 +83,31 @@ const init = () => {
 		else document.querySelector('.c-app__sidebar').classList.add('c-app__sidebar--ishidden');
 	});
 
+	
+	
+	document.querySelector('.js-notifications').addEventListener('click', e => {
+		let dropdown = document.querySelector('.js-notifications__dropdown');
+		let dropdown_other = document.querySelector('.js-user__dropdown');
+		dropdown_other.classList.add('c-dropdown--hidden');
+
+
+		if(dropdown.classList.contains('c-dropdown--hidden'))
+			dropdown.classList.remove('c-dropdown--hidden');
+		else
+			dropdown.classList.add('c-dropdown--hidden');
+		
+		
+	});
+	document.querySelector('.js-user').addEventListener('click', e => {
+		let dropdown = document.querySelector('.js-user__dropdown')
+		let dropdown_other = document.querySelector('.js-notifications__dropdown');
+		dropdown_other.classList.add('c-dropdown--hidden');
+
+		if(dropdown.classList.contains('c-dropdown--hidden'))
+			dropdown.classList.remove('c-dropdown--hidden');
+		else
+			dropdown.classList.add('c-dropdown--hidden');
+	});
 	daySelect = document.querySelector('.js-select');
 	graph = document.querySelector('.js-graph');
 
