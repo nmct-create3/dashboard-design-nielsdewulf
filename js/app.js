@@ -1,80 +1,83 @@
-let daySelect, graph, labels = [], data = [];
+let daySelect,
+	graph,
+	labels = [],
+	data = [];
 
 const getVisitorsByDay = async day => {
+	document.querySelector('.js-graph__loader').classList.remove('c-loader--ishidden');
 	let datajson = await get(`https://createdagen.azurewebsites.net/api/days/${day}`);
 
 	labels = [];
 	data = [];
 	let count = 1;
-	for(let row of datajson){
+	for (let row of datajson) {
 		try {
 			data.push(row.AantalBezoekers);
 			labels.push(`Week ${count}`);
 			count++;
-
-		} catch (error) {
-			
-		}
+		} catch (error) {}
 	}
-
 
 	var ctx = graph.getContext('2d');
 
-
 	var gradientFill = ctx.createLinearGradient(0, 0, 0, 500);
-	gradientFill.addColorStop(0, "rgba(85, 216, 254, .6)");
-	gradientFill.addColorStop(.5, "rgba(85, 216, 254, 0)");
+	gradientFill.addColorStop(0, 'rgba(85, 216, 254, .6)');
+	gradientFill.addColorStop(0.5, 'rgba(85, 216, 254, 0)');
 
-    chart = new Chart(ctx, {
-        type: 'line',
-        options: {
+	chart = new Chart(ctx, {
+		type: 'line',
+		options: {
 			legend: {
 				display: true,
 				position: 'bottom'
 			},
-            scales: {
-                xAxes: [{
-                    
-                    display: true,
-                    // scaleLabel: {
-                    //     display: true,
-                    //     labelString: 'Week'
-                    // },
+			scales: {
+				xAxes: [
+					{
+						display: true
+						// scaleLabel: {
+						//     display: true,
+						//     labelString: 'Week'
+						// },
+					}
+				],
+				yAxes: [
+					{
+						display: true,
+						ticks: {
+							suggestedMin: 0, // minimum will be 0, unless there is a lower value.
+							suggestedMax: 50
+						}
+					}
+				]
+			},
+			tooltips: {
+				intersect: false,
+				mode: 'index'
+			}
+		},
 
-                }],
-                yAxes: [{
-                    display: true,
-                    ticks: {
-                        suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
-                        suggestedMax: 50,
-                    }
-                }]
-            },
-            tooltips: {
-                intersect: false,
-                mode: 'index'
-            }
-        },
-
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Aantal bezoekers',
-				data: data,
-				lineTension: .3,
-                // backgroundColor: 'rgba(0,85,255,0.5)',
-                borderWidth: 2,
-                pointRadius: 5,
-                borderColor: '#55D8FE',
-                backgroundColor: gradientFill,
-                // borderColor: [
-                //     'rgba(255, 0, 0, 1)'
-                // ],
-                pointBackgroundColor: 'white'
-            }]
-        },
-
-    });
+		data: {
+			labels: labels,
+			datasets: [
+				{
+					label: 'Aantal bezoekers',
+					data: data,
+					lineTension: 0.3,
+					// backgroundColor: 'rgba(0,85,255,0.5)',
+					borderWidth: 2,
+					pointRadius: 5,
+					borderColor: '#55D8FE',
+					backgroundColor: gradientFill,
+					// borderColor: [
+					//     'rgba(255, 0, 0, 1)'
+					// ],
+					pointBackgroundColor: 'white'
+				}
+			]
+		}
+	});
+	document.querySelector('.js-graph__loader').classList.add('c-loader--ishidden');
 };
 
 const init = () => {
@@ -83,45 +86,44 @@ const init = () => {
 		else document.querySelector('.c-app__sidebar').classList.add('c-app__sidebar--ishidden');
 	});
 
-	
-	
+	document.documentElement.addEventListener('click', e => {
+		if (e.target.closest('.c-dropdown') || e.target.closest('.c-button')) return;
+
+		let dropdown = document.querySelector('.js-notifications__dropdown');
+		let dropdown_other = document.querySelector('.js-user__dropdown');
+		dropdown.classList.add('c-dropdown--hidden');
+		dropdown_other.classList.add('c-dropdown--hidden');
+	});
+
 	document.querySelector('.js-notifications').addEventListener('click', e => {
 		let dropdown = document.querySelector('.js-notifications__dropdown');
 		let dropdown_other = document.querySelector('.js-user__dropdown');
 		dropdown_other.classList.add('c-dropdown--hidden');
 
-
-		if(dropdown.classList.contains('c-dropdown--hidden'))
-			dropdown.classList.remove('c-dropdown--hidden');
-		else
-			dropdown.classList.add('c-dropdown--hidden');
-		
-		
+		if (dropdown.classList.contains('c-dropdown--hidden')) dropdown.classList.remove('c-dropdown--hidden');
+		else dropdown.classList.add('c-dropdown--hidden');
 	});
 	document.querySelector('.js-user').addEventListener('click', e => {
-		let dropdown = document.querySelector('.js-user__dropdown')
+		let dropdown = document.querySelector('.js-user__dropdown');
 		let dropdown_other = document.querySelector('.js-notifications__dropdown');
 		dropdown_other.classList.add('c-dropdown--hidden');
 
-		if(dropdown.classList.contains('c-dropdown--hidden'))
-			dropdown.classList.remove('c-dropdown--hidden');
-		else
-			dropdown.classList.add('c-dropdown--hidden');
+		if (dropdown.classList.contains('c-dropdown--hidden')) dropdown.classList.remove('c-dropdown--hidden');
+		else dropdown.classList.add('c-dropdown--hidden');
 	});
 	daySelect = document.querySelector('.js-select');
 	graph = document.querySelector('.js-graph');
 
-	daySelect.addEventListener('input', (e) => {
+	daySelect.addEventListener('input', e => {
 		getVisitorsByDay(e.target.value);
 	});
 	getVisitorsByDay('maandag');
 
 	var percentageComplete = 0.75;
-	var strokeDashOffsetValue = 263.4674987792969 - (percentageComplete * 263.4674987792969);
-	var progressBar = document.querySelector(".js-progress-bar");
+	var strokeDashOffsetValue = 263.4674987792969 - percentageComplete * 263.4674987792969;
+	var progressBar = document.querySelector('.js-progress-bar');
 	progressBar.style.strokeDashoffset = strokeDashOffsetValue;
-	console.log(progressBar.style.strokeDashoffset );
-
+	console.log(progressBar.style.strokeDashoffset);
 };
 
 document.addEventListener('DOMContentLoaded', () => {

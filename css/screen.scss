@@ -382,7 +382,7 @@ input::placeholder {
     }
 
     .c-app__topbar {
-        display: grid;//block
+        display: grid; //block
         grid-template-columns: 1fr auto auto;
     }
 
@@ -576,13 +576,15 @@ input::placeholder {
 
     .c-dashboard__item {
         background: white;
-        padding: 24px;
+        position: relative;
         grid-column: 1 / span 12;
         box-shadow: var(--shadow-neutral);
     }
 }
 
 .c-card {
+    padding: 24px;
+
     .c-card__header {
         display: flex;
         justify-content: space-between;
@@ -629,16 +631,19 @@ input::placeholder {
     pointer-events: none;
     fill: var(--color-neutral-20-dark);
 }
-.c-progresscircle{
+
+.c-progresscircle {
     transform: rotate(-90deg);
 }
-.c-progresscircle__outer{
+
+.c-progresscircle__outer {
     fill: none;
     stroke: var(--color-neutral-10-dark);
     stroke-width: 8;
 
 }
-.c-progresscircle__inner{
+
+.c-progresscircle__inner {
     fill: none;
     stroke: var(--color-alpha);
     stroke-dasharray: 263.4674987792969;
@@ -646,50 +651,62 @@ input::placeholder {
     stroke-width: 8;
 
 }
-.c-search{
+
+.c-search {
     display: flex;
     align-items: center;
     height: 100%;
     position: relative;
     padding-right: 20px;
 
-    .c-search__icon{
+
+    .c-search__icon {
         fill: var(--color-neutral-15-dark);
         width: 16px;
         height: 16px;
         left: 20px;
         position: absolute;
     }
-    .c-search__input{
+
+    .c-search__input {
         all: unset;
         border: none;
         padding-left: 46px;
         height: 100%;
         width: 100%;
         color: var(--color-neutral-dark);
+
+        &::placeholder {
+            color: var(--color-neutral-dark);
+        }
     }
 }
-.c-topbar__options{
+
+.c-topbar__options {
     display: flex;
     width: 111px;
     justify-content: space-between;
     align-items: center;
 }
-.c-button{
+
+.c-button {
     position: relative;
-    .c-button__button{
+
+    .c-button__button {
         all: unset;
         display: flex;
         align-items: center;
     }
-    .c-button__icon{
+
+    .c-button__icon {
         fill: var(--color-neutral-15-dark);
         width: 16px;
         height: 16px;
         margin-top: 4px;
     }
 }
-.c-dropdown{
+
+.c-dropdown {
     position: absolute;
     z-index: 1000;
     right: -100px;
@@ -698,37 +715,43 @@ input::placeholder {
     background: white;
     box-shadow: var(--shadow-neutral-darker);
 
-    
 
-    .c-dropdown__title{
+
+    .c-dropdown__title {
         padding: 18px 0;
         text-align: center;
-        h2{
+
+        h2 {
             margin: 0;
         }
     }
-    .c-dropdown__list{
+
+    .c-dropdown__list {
         background: var(--color-neutral-2-dark);
         border-top: 1px solid var(--color-neutral-5-dark);
         border-bottom: 1px solid var(--color-neutral-5-dark);
 
     }
-    .c-dropdown__item{
+
+    .c-dropdown__item {
         padding: 12px 47px;
-        h4{
+
+        h4 {
             margin: 0 0 3px 0;
         }
-        p{
+
+        p {
             margin: 0;
         }
     }
 
-    .c-dropdown__item:nth-child(n+2){
+    .c-dropdown__item:nth-child(n+2) {
         border-top: 1px solid var(--color-neutral-5-dark);
     }
-    .c-dropdown__footer{
-        
-        a{
+
+    .c-dropdown__footer {
+
+        a {
             padding: 20px 0;
             display: block;
             text-align: center;
@@ -738,7 +761,9 @@ input::placeholder {
         }
 
     }
-    &:after,&:before {
+
+    &:after,
+    &:before {
         bottom: 100%;
         right: 98px;
         border: solid transparent;
@@ -747,25 +772,28 @@ input::placeholder {
         width: 0;
         position: absolute;
         pointer-events: none;
-        
+
     }
-    
+
     &:after {
         border-color: rgba(136, 183, 213, 0);
         border-bottom-color: white;
         border-width: 10px;
         margin-left: -10px;
     }
-    
+
 }
-.c-dropdown--hidden{
+
+.c-dropdown--hidden {
     display: none;
 }
-.c-topbar__user{
+
+.c-topbar__user {
     display: flex;
     align-items: center;
 }
-.c-user{
+
+.c-user {
     height: 28px;
     border-left: 1px solid var(--color-neutral-5-dark);
     display: flex;
@@ -774,40 +802,125 @@ input::placeholder {
     margin-left: 22px;
     padding-left: 21px;
     padding-right: 20px;
-    
-    p{
+
+    p {
         margin: 0 7px 0 0;
     }
-    .c-user__icon{
+
+    .c-user__icon {
         fill: var(--color-neutral-15-dark);
         width: 16px;
         height: 16px;
     }
-    .c-user__avatar{
+
+    .c-user__avatar {
         margin-left: 11px;
         width: 38px;
         height: 38px;
         background: url(../img/avatar/Avatar.png);
     }
 }
+
 .c-user__dropdown {
-    .c-dropdown{
+    .c-dropdown {
         top: 65px;
         right: 35px;
         width: 200px;
         padding: 9px 23px;
-        &:after,&:before {
+
+        &:after,
+        &:before {
             right: 75px;
-            
-            
+
+
         }
     }
-    .c-dropdown__item{
+
+    .c-dropdown__item {
         padding: 13px 0;
         text-align: center;
     }
-    
-    
+
+
+}
+
+@keyframes aaaa {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shrt {
+    0% {
+        stroke-dashoffset: -400px;
+    }
+
+
+
+    50% {
+        stroke-dashoffset: -100px;
+    }
+
+
+
+    100% {
+        stroke-dashoffset: -400px;
+    }
+}
+
+@keyframes clr {
+    0% {
+        stroke: Gold;
+    }
+
+    25% {
+        stroke: limegreen;
+    }
+
+    50% {
+        stroke: dodgerblue;
+    }
+
+    75% {
+        stroke: hotpink;
+    }
+
+    100% {
+        stroke: gold;
+    }
+}
+
+.c-loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: white;
+    z-index: 1000;
+
+    &--ishidden {
+        display: none;
+    }
+
+    .c-loader__circle {
+        stroke-width: 12px;
+        fill: none;
+        stroke: black;
+        transform-origin: center;
+        transform-box: fill-box;
+        stroke-dasharray: 500px;
+        stroke-linecap: round;
+
+        /*627.303466796875px*/
+        stroke-dashoffset: 500px;
+        animation: aaaa .8s linear infinite, shrt 2s linear infinite, clr 8s linear infinite;
+    }
 }
 
 /*------------------------------------*\
